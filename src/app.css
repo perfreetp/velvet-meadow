@@ -1,0 +1,150 @@
+:root {
+  --bg: #f4f3ef;
+  --panel: #ffffff;
+  --border: #d9d5cc;
+  --text: #292524;
+  --muted: #78716c;
+  --primary: #2563eb;
+  --primary-soft: #dbeafe;
+  --danger: #e5484d;
+  --warn: #f5a524;
+  --info: #3b82f6;
+  --ok: #15803d;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  font-family: system-ui, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html, body, #app { height: 100%; margin: 0; }
+body { background: var(--bg); color: var(--text); font-size: 13px; overflow: hidden; }
+
+button {
+  font: inherit;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: var(--text);
+  white-space: nowrap;
+}
+button:hover:not(:disabled) { background: #f5f4f0; border-color: #b8b2a7; }
+button:disabled { opacity: 0.45; cursor: not-allowed; }
+button.primary { background: var(--primary); border-color: var(--primary); color: #fff; }
+button.primary:hover:not(:disabled) { background: #1d4ed8; }
+button.danger { color: var(--danger); border-color: #f3b6b8; }
+button.active { background: var(--primary-soft); border-color: var(--primary); color: var(--primary); font-weight: 600; }
+
+input, select {
+  font: inherit;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 8px;
+  background: #fff;
+  color: var(--text);
+  width: 100%;
+}
+input[type='number'] { width: 90px; }
+input[type='checkbox'] { width: auto; }
+
+.app-shell {
+  display: grid;
+  grid-template-rows: 48px 1fr 26px;
+  grid-template-columns: 56px 1fr 290px;
+  grid-template-areas:
+    'topbar topbar topbar'
+    'tools canvas panel'
+    'status status status';
+  height: 100%;
+}
+.topbar { grid-area: topbar; }
+.tool-rail { grid-area: tools; }
+.canvas-wrap { grid-area: canvas; min-width: 0; min-height: 0; position: relative; overflow: hidden; }
+.side-panel { grid-area: panel; min-height: 0; overflow-y: auto; }
+.statusbar { grid-area: status; }
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  z-index: 2;
+}
+.topbar .brand { font-weight: 700; font-size: 14px; margin-right: 8px; }
+.topbar .group { display: flex; gap: 6px; align-items: center; }
+.topbar .sep { width: 1px; height: 26px; background: var(--border); margin: 0 4px; }
+
+.tool-rail {
+  background: var(--panel);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 0;
+  gap: 6px;
+}
+.tool-rail button {
+  width: 40px; height: 40px;
+  padding: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 17px;
+}
+
+.side-panel {
+  background: var(--panel);
+  border-left: 1px solid var(--border);
+  padding: 10px 12px;
+}
+.side-panel h3 {
+  margin: 14px 0 6px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+.side-panel h3:first-child { margin-top: 2px; }
+
+.row { display: flex; align-items: center; gap: 8px; margin: 5px 0; }
+.row label { color: var(--muted); min-width: 64px; }
+.row .grow { flex: 1; }
+
+.statusbar {
+  background: #292524;
+  color: #d6d3d1;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 16px;
+  font-size: 12px;
+}
+.statusbar .ok { color: #86efac; }
+.statusbar .bad { color: #fca5a5; }
+
+.badge {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.badge.critical { background: #fee2e2; color: #b91c1c; }
+.badge.major { background: #fef3c7; color: #b45309; }
+.badge.minor { background: #dbeafe; color: #1d4ed8; }
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin: 6px 0;
+  background: #fcfbfa;
+}
+.card.warn-flash { border-color: var(--danger); }
+
+.muted { color: var(--muted); }
+.mono { font-family: ui-monospace, Consolas, monospace; }
+.scroll-list { max-height: 260px; overflow-y: auto; }
+.pill { font-size: 11px; padding: 1px 8px; border-radius: 999px; background: #eeeae2; color: var(--muted); }

@@ -1,0 +1,40 @@
+{
+  "name": "panel-vector-editor",
+  "version": "1.0.0",
+  "description": "塑料板式床/储物柜板件矢量轮廓编辑器(Svelte 5 + Canvas2D + OffscreenCanvas)",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "svelte-check --tsgo --tsconfig ./tsconfig.json",
+    "test:unit": "tsx tests/geometry.test.ts",
+    "test:e2e": "tsx tests/e2e.test.ts",
+    "test:batch": "tsx tests/batch.e2e.test.ts",
+    "fixtures": "node tests/make-fixtures.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perfreetp/velvet-meadow.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/perfreetp/velvet-meadow/issues"
+  },
+  "homepage": "https://github.com/perfreetp/velvet-meadow#readme",
+  "dependencies": {
+    "@sveltejs/vite-plugin-svelte": "^7.3.1",
+    "svelte": "^5.57.3",
+    "vite": "^8.3.8"
+  },
+  "devDependencies": {
+    "@typescript/native": "npm:typescript@^7.0.2",
+    "playwright": "^1.65.1",
+    "svelte-check": "^4.7.8",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3"
+  }
+}

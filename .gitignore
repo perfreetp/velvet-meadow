@@ -16,3 +16,10 @@ node_modules/
 __pycache__/
 .venv/
 venv/
+
+# 构建与测试产物
+dist/
+tests/fixtures/
+playwright-report/
+test-results/
+.svelte-check/
