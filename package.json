@@ -1,0 +1,22 @@
+{
+  "name": "floral-vector-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@babylonjs/core": "^7.42.0",
+    "earcut": "^3.2.4",
+    "paper": "^0.12.18",
+    "solid-js": "^1.9.3"
+  },
+  "devDependencies": {
+    "playwright": "^1.65.1",
+    "vite": "^6.0.7",
+    "vite-plugin-solid": "^2.11.0"
+  }
+}
