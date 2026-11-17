@@ -16,3 +16,9 @@ node_modules/
 __pycache__/
 .venv/
 venv/
+
+# 构建产物
+dist/
+
+# 测试截图
+test/shots/
