@@ -1,0 +1,24 @@
+{
+  "name": "river-terrain-workbench",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "河道地形曲面与堤线建模台",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "tsx tests/smoke.ts",
+    "test:e2e": "tsx tests/e2e.ts"
+  },
+  "dependencies": {
+    "three": "0.169.0"
+  },
+  "devDependencies": {
+    "@types/three": "0.169.0",
+    "playwright": "^1.65.1",
+    "tsx": "^4.23.15",
+    "typescript": "5.6.3",
+    "vite": "5.4.11"
+  }
+}

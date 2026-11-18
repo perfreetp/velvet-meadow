@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>河道地形曲面与堤线建模台</title>
+    <script type="module" crossorigin src="./assets/index-BoenhNfQ.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BXL23P4s.css">
+  </head>
+  <body>
+    <app-header></app-header>
+    <tool-bar></tool-bar>
+    <main class="layout">
+      <aside class="left">
+        <side-panel></side-panel>
+      </aside>
+      <section class="viewport">
+        <div id="scene-host"></div>
+        <div class="scene-badge" id="scene-badge">未建档</div>
+      </section>
+      <aside class="right">
+        <div class="panel-block"><curvature-panel></curvature-panel></div>
+        <div class="panel-block"><section-panel></section-panel></div>
+        <div class="panel-block"><unfold-panel></unfold-panel></div>
+      </aside>
+    </main>
+    <status-bar></status-bar>
+  </body>
+</html>
