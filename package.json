@@ -1,0 +1,22 @@
+{
+  "name": "historic-district-lighting-workbench",
+  "private": true,
+  "version": "1.0.0",
+  "description": "历史街区保护规划 · 日照与夜间照明二维布光预览台",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "npm run build --workspace client",
+    "start": "npm run start --workspace server",
+    "test": "node --test test/engine.test.js",
+    "test:api": "node test/api.smoke.mjs",
+    "test:browser": "node test/browser.cdp.mjs",
+    "test:e2e": "node test/e2e.workflow.mjs && node test/e2e.annotation.mjs"
+  },
+  "allowScripts": {
+    "esbuild@0.25.12": true
+  }
+}

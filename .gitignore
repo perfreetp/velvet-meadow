@@ -16,3 +16,7 @@ node_modules/
 __pycache__/
 .venv/
 venv/
+# 构建产物与运行时数据
+client/dist/
+server/data/
+test/shots/
